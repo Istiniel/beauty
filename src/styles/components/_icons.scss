@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.social-link {
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    filter: saturate(100%) brightness(0) invert(95%) sepia(0%) saturate(0%)
+      hue-rotate(215deg) brightness(81%) contrast(98%);
+  }
+}

@@ -1,0 +1,133 @@
+@use '../abstracts/' as *;
+
+button {
+  background-color: tomtato;
+  border-radius: 1.9rem;
+
+  padding: 1.2rem 2.7rem;
+  max-width: fit-content;
+
+  font-family: $font-sans;
+  @include font(1.2rem, 1.4rem, 500);
+  letter-spacing: 0.05em;
+
+  @extend %transition;
+}
+
+// green
+.green {
+  background-color: $button-green;
+  box-shadow: inset 0px 0px 0px 2px $button-green;
+
+  color: #ffffff;
+
+  &:hover,
+  &:active {
+    background-color: #6dd862;
+    box-shadow: inset 0px 0px 0px 2px #6dd862;
+
+    color: #ffffff;
+  }
+}
+
+.green.outlined {
+  background-color: transparent;
+  color: $primary-black;
+
+  &:hover,
+  &:active {
+    background-color: $button-green !important;
+    box-shadow: inset 0px 0px 0px 2px $button-green !important;
+
+    color: #ffffff;
+  }
+}
+
+//red
+.red {
+  background-color: $button-red;
+  box-shadow: inset 0px 0px 0px 2px $button-red;
+
+  color: #ffffff;
+
+  &:hover,
+  &:active {
+    background-color: $button-gray;
+    box-shadow: inset 0px 0px 0px 2px $button-gray;
+
+    color: #ffffff;
+  }
+}
+
+.red.outlined {
+  background-color: transparent;
+  color: $primary-black;
+
+  &:hover,
+  &:active {
+    background-color: $button-red !important;
+    box-shadow: inset 0px 0px 0px 2px $button-red !important;
+
+    color: #ffffff;
+  }
+}
+
+//gray
+.gray {
+  background-color: $button-gray;
+  box-shadow: inset 0px 0px 0px 2px $button-gray;
+  border-radius: 2rem;
+
+  color: #ffffff;
+
+  &:hover,
+  &:active {
+    background-color: $button-red;
+    box-shadow: inset 0px 0px 0px 2px $button-red;
+
+    color: #ffffff;
+  }
+}
+
+.gray.outlined {
+  background-color: transparent;
+  color: $primary-black;
+
+  &:hover,
+  &:active {
+    background-color: $button-gray !important;
+    box-shadow: inset 0px 0px 0px 2px $button-gray !important;
+
+    color: #ffffff;
+  }
+}
+
+//white
+.white {
+  background-color: $button-white;
+  box-shadow: inset 0px 0px 0px 2px $button-white;
+  border-radius: 2rem;
+
+  color: #ffffff;
+
+  &:hover,
+  &:active {
+    background-color: $button-red;
+    box-shadow: inset 0px 0px 0px 2px $button-red;
+
+    color: #ffffff;
+  }
+}
+
+.white.outlined {
+  background-color: transparent;
+  color: $button-white;
+
+  &:hover,
+  &:active {
+    background-color: #474747 !important;
+    box-shadow: inset 0px 0px 0px 2px $button-white !important;
+
+    color: #ffffff;
+  }
+}

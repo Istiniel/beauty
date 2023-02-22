@@ -1,0 +1,219 @@
+@use '../abstracts/' as *;
+
+// super-chair section
+
+.super-chair {
+  background-image: url('../images/icons/super-chair__bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 60rem;
+
+  @include maxQ(small) {
+    height: 35rem;
+    background-image: none;
+    background-color: $primary-green;
+  }
+}
+
+.super-chair__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  @include maxQ(small) {
+    justify-content: center;
+  }
+}
+
+.super-chair__info {
+  @include maxQ(small) {
+    margin-top: 2rem;
+  }
+}
+
+.super-chair__info > button {
+  padding: 1.2rem 4.5rem;
+}
+
+// offers section
+.offers {
+  background-color: #efefef;
+}
+
+.offers__container {
+  padding-top: 8rem;
+  padding-bottom: 13.2rem;
+
+  @extend %flexcolumn;
+
+  @include maxQ(large) {
+    align-items: center;
+  }
+}
+
+.offers__title {
+  font-family: $font-sans;
+  @include font(2.4rem, 2.8rem, 700);
+
+  @include maxQ(small) {
+    text-align: center;
+  }
+}
+
+.offers__cards {
+  margin-top: 2.8rem;
+  margin-bottom: 10rem;
+}
+
+.chairs {
+  @include flex-columns(23%);
+  align-items: center;
+
+  @include maxQ(large) {
+    width: 70%;
+    @include flex-columns(35%);
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+.card {
+  background-color: $primary-white;
+  padding: 2.5rem 4.5rem;
+  @extend %flexcolumn;
+  align-items: center;
+
+  text-align: center;
+
+  @include maxQ(large) {
+    max-width: 25.5rem;
+  }
+}
+.card__image {
+  min-width: 125px;
+  height: 166px;
+}
+.card__info {
+  min-width: 16.6rem;
+  padding: 2rem 0;
+  font-family: $font-sans;
+  @include font(1.4rem, 2rem, 400);
+}
+.card__price {
+  padding-bottom: 2rem;
+
+  font-family: $font-sans;
+  @include font(2.1rem, 2.5rem, 500);
+  letter-spacing: 0.05em;
+}
+
+.card__button {
+  padding-right: 3.9rem;
+  padding-left: 3.9rem;
+}
+
+// offers__contacs section
+
+.offers__contacts {
+  width: 100%;
+
+  @include flex-columns(49%);
+  align-items: center;
+
+  @include maxQ(large) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.gifts {
+  width: 55%;
+  background-color: $primary-green;
+  padding: 3.5rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include maxQ(medium) {
+    width: 49rem;
+  }
+
+  @include maxQ(small) {
+    width: 26rem;
+  }
+}
+.gifts__info.info {
+  max-width: 25rem;
+
+  & .info__title {
+    font-family: $font-sans;
+    @include font(1.8rem, 2.1rem, 700);
+  }
+  & .info__about {
+    font-family: $font-sans;
+    @include font(1.4rem, 2rem, 400);
+  }
+  & .info__input {
+    padding: 0.7rem 1rem;
+    padding-left: 2.5rem;
+    width: 80%;
+  }
+}
+
+.gifts__image {
+  max-width: 140px;
+  width: 100%;
+  height: auto;
+
+  @include maxQ(small) {
+    display: none;
+  }
+}
+
+.map {
+  width: 55%;
+  background-color: $primary-green;
+  padding: 3.5rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include maxQ(medium) {
+    width: 49rem;
+  }
+
+  @include maxQ(small) {
+    width: 26rem;
+  }
+}
+.map__info.info {
+  max-width: 18rem;
+
+  & .info__title {
+    font-family: $font-sans;
+    @include font(1.8rem, 2.1rem, 700);
+  }
+  & .info__about {
+    font-family: $font-sans;
+    @include font(1.4rem, 2rem, 400);
+  }
+  & .info__input {
+    padding-left: 2.5rem;
+    width: 80%;
+  }
+}
+.map__image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+
+  @include maxQ(small) {
+    display: none;
+  }
+}
